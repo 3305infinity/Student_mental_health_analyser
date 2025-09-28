@@ -33,13 +33,13 @@ This application employs ensemble machine learning methodologies to analyze stud
 
 ### Dependencies
 ```
-streamlit>=1.28.0
-pandas>=1.5.0
-numpy>=1.21.0
-scikit-learn>=1.3.0
-plotly>=5.15.0
-google-generativeai>=0.3.0
-joblib>=1.3.0
+streamlit
+pandas
+numpy
+scikit-learn
+plotly
+google-generativeai
+joblib
 ```
 
 ### Hardware Specifications
@@ -209,45 +209,8 @@ prediction = model.predict(user_input_dict)
 - Feature enhancement integration
 - Bug fix deployment procedures
 
-## Research Applications
-
 ### Academic Use Cases
 - Mental health research studies
 - Algorithm comparison analysis
 - Feature importance investigation
 - Bias detection in ML models
-
-### Ethical Considerations
-- Algorithmic fairness assessment
-- Demographic bias evaluation
-- Interpretability requirements
-- Consent and transparency protocols
-
-## Support and Maintenance
-
-### Technical Support
-- GitHub issue tracking
-- Documentation wiki
-- Code review processes
-- Community contribution guidelines
-
-### Professional Services
-- Custom model development
-- Enterprise deployment support
-- Training and consultation
-- Compliance assistance
-
-## License and Attribution
-
-This project is released under the MIT License. Commercial use requires appropriate attribution and compliance with all applicable regulations regarding medical software.
-
-## References
-
-1. Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, 2011
-2. Streamlit: The fastest way to build data apps, Streamlit Inc.
-3. Google AI Platform: Generative AI APIs and Services
-4. World Health Organization: Mental Health Guidelines and Standards
-
----
-
-**Professional Notice**: This system is designed for research and educational applications. Clinical implementation requires appropriate validation studies, regulatory approval, and professional medical oversight.
