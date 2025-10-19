@@ -44,17 +44,16 @@ A cutting-edge **Python & Streamlit web app** that predicts student mental healt
 ## ⚡ Setup & Installation
 
 1. **Clone the repo**
-```bash
+
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 Install dependencies
 
-bash
+
 Copy code
 pip install -r requirements.txt
 Set API Keys (Optional)
 
-bash
 Copy code
 export GEMINI_API_KEY="your-gemini-key"
 export MURF_API_KEY="your-murf-key"
@@ -62,9 +61,11 @@ Recommended to use environment variables for security.
 
 Run the app
 
-bash
 Copy code
 streamlit run app.py
+
+
+
 🧠 How It Works
 User fills in their profile: age, gender, sleep, study habits, diet, etc.
 
