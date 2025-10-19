@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    image: student-mental-health  # the image we built
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app   # <-- this is key! Maps your local folder to /app in container
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
