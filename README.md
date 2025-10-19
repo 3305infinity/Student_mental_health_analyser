@@ -1,216 +1,77 @@
+# 🎓 Student Mental Health Analyzer Pro
 
-# Student Mental Health Analyzer Pro
+A cutting-edge **Python & Streamlit web app** that predicts student mental health risks using **machine learning** and provides **AI-powered advice**. With lifelike speech output, this project combines **ML models**, **Google Gemini AI**, and **Murf TTS** for a fully interactive experience.
 
-An advanced machine learning system for mental health risk assessment in academic environments.
+---
 
-## Overview
+## 🔥 Why This Project Stands Out
 
-This application employs ensemble machine learning methodologies to analyze student mental health indicators and provide data-driven risk assessments. The system integrates multiple algorithmic approaches with natural language processing capabilities for comprehensive mental health evaluation.
+- **Advanced ML Techniques**:  
+  The app uses a custom-trained ML model (`AdvancedStudentHealthModel`) to predict **depression risk** and assess confidence in predictions. This allows for personalized and data-driven mental health insights.
 
-**IMPORTANT MEDICAL DISCLAIMER**: This software is designed for research and educational purposes only. It does not provide medical diagnosis or treatment recommendations. Users experiencing mental health crises should consult qualified healthcare professionals immediately.
+- **AI-Powered Advice with Gemini**:  
+  Gemini AI analyzes user profiles and ML predictions to provide **actionable, student-friendly recommendations**. This ensures advice is not generic but tailored to the risk level.
 
-## Technical Specifications
+- **Lifelike Speech with Murf TTS**:  
+  Murf converts Gemini’s textual advice into **natural-sounding speech**, enhancing accessibility and engagement. Over 130 voices and multiple languages allow customization for real-world applications.
 
-### Core Architecture
-- **Machine Learning Pipeline**: 8 comparative algorithms with automated model selection
-- **Data Processing**: Scikit-learn preprocessing with categorical encoding and feature scaling
-- **AI Integration**: Google Gemini API for natural language recommendations
-- **Interface**: Streamlit-based web application with interactive visualizations
+- **Interactive Visualizations**:  
+  Risk probabilities are visualized using **Plotly pie charts**, making results easy to understand at a glance.
 
-### Algorithmic Framework
-| Algorithm | Implementation | Primary Use Case |
-|-----------|---------------|------------------|
-| Random Forest | Ensemble bagging | Feature importance analysis |
-| Gradient Boosting | Sequential boosting | Complex pattern recognition |
-| Support Vector Machine | Kernel-based classification | High-dimensional separation |
-| Logistic Regression | Linear probabilistic model | Baseline comparison |
-| Decision Tree | CART algorithm | Rule extraction |
-| K-Nearest Neighbors | Distance-based classification | Local pattern matching |
-| Naive Bayes | Probabilistic classifier | Categorical feature handling |
-| AdaBoost | Adaptive boosting | Weak learner enhancement |
+---
 
-## System Requirements
+## 🚀 Key Features
 
-### Dependencies
-```
-streamlit
-pandas
-numpy
-scikit-learn
-plotly
-google-generativeai
-joblib
-```
+- Predicts **Depression Risk**, **Risk Level**, and **Confidence**.
+- Provides **Best Model Used** for transparency.
+- Displays **actionable AI advice** based on ML prediction.
+- Optional **audio advice** using Murf TTS.
+- Fully responsive and student-friendly **Streamlit interface**.
 
-### Hardware Specifications
-- **Minimum**: 4GB RAM, 1GB storage
-- **Recommended**: 8GB RAM, 2GB storage
-- **Processing**: Multi-core CPU recommended for model training
+---
 
-## Installation Protocol
+## 🛠 Tech Stack
 
-### Environment Setup
+- **Python 3.10+**
+- **Streamlit** – UI framework
+- **Pandas & Plotly** – Data processing & visualization
+- **Google Gemini AI** – AI-generated actionable advice
+- **Murf AI Python SDK** – Text-to-speech output
+- Custom **ML models** in `model_training.py`
+
+---
+
+## ⚡ Setup & Installation
+
+1. **Clone the repo**
 ```bash
-git clone <repository-url>
-cd student-mental-health-analyzer
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+Install dependencies
+
+bash
+Copy code
 pip install -r requirements.txt
-```
+Set API Keys (Optional)
 
-### Configuration Management
-1. **Dataset Preparation**: Place training dataset as `Depression Student Dataset.csv`
-2. **API Configuration**: Set environment variable `GEMINI_API_KEY` or modify source
-3. **Model Training**: Execute initial training pipeline
+bash
+Copy code
+export GEMINI_API_KEY="your-gemini-key"
+export MURF_API_KEY="your-murf-key"
+Recommended to use environment variables for security.
 
-### Required Data Schema
-```
-Features:
-- Gender: categorical
-- Age: numeric (16-35)
-- Academic Pressure: numeric (1.0-5.0)
-- Study Satisfaction: numeric (1.0-5.0)
-- Sleep Duration: categorical
-- Dietary Habits: categorical
-- Study Hours: numeric (0-16)
-- Financial Stress: numeric (1.0-5.0)
-- Family History of Mental Illness: binary
-- Have you ever had suicidal thoughts: binary
+Run the app
 
-Target:
-- Depression: binary classification
-```
-
-## Implementation Guide
-
-### Model Training
-```bash
-python model_training.py
-```
-Generates `all_models.pkl` containing:
-- Trained model objects
-- Feature encoders
-- Scaling parameters
-- Performance metrics
-- Cross-validation results
-
-### Application Deployment
-```bash
+bash
+Copy code
 streamlit run app.py
-```
-Access via `http://localhost:8501`
+🧠 How It Works
+User fills in their profile: age, gender, sleep, study habits, diet, etc.
 
-## Performance Metrics
+ML model predicts depression risk, confidence, and risk level.
 
-### Model Evaluation Framework
-- **Cross-Validation**: 5-fold stratified sampling
-- **Metrics**: Accuracy, Precision, Recall, F1-Score
-- **Selection Criteria**: Highest cross-validation accuracy
-- **Risk Stratification**: Probabilistic thresholding (0.4, 0.7)
+Gemini AI generates actionable advice tailored to risk level.
 
-### Expected Performance Ranges
-- **Ensemble Methods**: 85-92% accuracy
-- **Linear Models**: 80-85% accuracy
-- **Distance-Based**: 75-82% accuracy
-- **Probabilistic**: 74-80% accuracy
+Murf TTS converts text advice to speech (optional).
 
-## Data Processing Pipeline
-
-### Preprocessing Steps
-1. **Categorical Encoding**: Label encoding for nominal variables
-2. **Numerical Transformation**: Sleep duration text-to-numeric conversion
-3. **Feature Scaling**: StandardScaler for distance-based algorithms
-4. **Missing Value Handling**: Forward-fill and default value imputation
-5. **Stratified Sampling**: Maintained class distribution in train/test splits
-
-### Feature Engineering
-- Sleep duration normalized to numeric hours
-- Categorical variables encoded with class preservation
-- Standardization applied selectively by algorithm requirements
-
-## Security and Privacy
-
-### Data Handling
-- **Session-Based Processing**: No persistent storage of user inputs
-- **Local Computation**: All ML operations performed locally
-- **API Security**: HTTPS encryption for external AI calls
-- **Memory Management**: Automatic cleanup of sensitive data
-
-### Privacy Controls
-- No user identification collection
-- Temporary data processing only
-- Secure API key management
-- GDPR-compliant data handling
-
-## API Documentation
-
-### Model Interface
-```python
-# Initialize model
-model = AdvancedStudentHealthModel()
-
-# Train on dataset
-results = model.train_all_models('dataset.csv')
-
-# Make prediction
-prediction = model.predict(user_input_dict)
-```
-
-### Response Format
-```python
-{
-    'prediction': str,              # 'Depression' or 'No Depression'
-    'confidence': float,            # Probability confidence
-    'risk_level': str,              # 'Low', 'Medium', 'High'
-    'probabilities': dict,          # Class probabilities
-    'best_model_used': str         # Selected algorithm name
-}
-```
-
-## Quality Assurance
-
-### Testing Protocol
-- Unit tests for all core functions
-- Integration tests for complete pipeline
-- Performance benchmarks across datasets
-- Cross-platform compatibility verification
-
-### Validation Framework
-- K-fold cross-validation
-- Holdout test set evaluation
-- Statistical significance testing
-- Bias and fairness assessment
-
-## Deployment Considerations
-
-### Production Environment
-- Container orchestration compatibility
-- Horizontal scaling capabilities
-- Load balancing support
-- Health check endpoints
-
-### Monitoring and Logging
-- Model performance tracking
-- Error rate monitoring
-- Usage analytics
-- System resource utilization
-
-## Maintenance and Updates
-
-### Model Retraining
-- Automated retraining pipelines
-- Performance degradation detection
-- New data integration protocols
-- Version control for model artifacts
-
-### Software Updates
-- Dependency vulnerability scanning
-- API compatibility maintenance
-- Feature enhancement integration
-- Bug fix deployment procedures
-
-### Academic Use Cases
-- Mental health research studies
-- Algorithm comparison analysis
-- Feature importance investigation
-- Bias detection in ML models
+Results and recommendations are displayed with interactive charts.
