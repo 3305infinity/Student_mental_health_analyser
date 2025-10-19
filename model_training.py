@@ -348,5 +348,3 @@ class AdvancedStudentHealthModel:
             return True
         except:
             return False
-
->>>>>>> 05d435549e222f24cdf594b61f70e5f8d66f9678
