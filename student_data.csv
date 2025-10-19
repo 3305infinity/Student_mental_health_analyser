@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Gender,Age,Academic Pressure,Study Satisfaction,Sleep Duration,Dietary Habits,Have you ever had suicidal thoughts ?,Study Hours,Financial Stress,Family History of Mental Illness,Depression
 Male,28,2.0,4.0,7-8 hours,Moderate,Yes,9,2,Yes,No
 Male,28,4.0,5.0,5-6 hours,Healthy,Yes,7,1,Yes,No
@@ -502,7 +501,6 @@ Male,24,2.0,1.0,Less than 5 hours,Unhealthy,Yes,8,5,No,Yes
 Female,23,3.0,5.0,5-6 hours,Healthy,No,1,5,Yes,No
 Male,33,4.0,4.0,More than 8 hours,Healthy,No,8,1,Yes,No
 Male,18,5.0,3.0,More than 8 hours,Unhealthy,No,6,2,Yes,Yes
-=======
 Gender,Age,Academic Pressure,Study Satisfaction,Sleep Duration,Dietary Habits,Have you ever had suicidal thoughts ?,Study Hours,Financial Stress,Family History of Mental Illness,Depression
 Male,28,2.0,4.0,7-8 hours,Moderate,Yes,9,2,Yes,No
 Male,28,4.0,5.0,5-6 hours,Healthy,Yes,7,1,Yes,No
@@ -1006,4 +1004,3 @@ Male,24,2.0,1.0,Less than 5 hours,Unhealthy,Yes,8,5,No,Yes
 Female,23,3.0,5.0,5-6 hours,Healthy,No,1,5,Yes,No
 Male,33,4.0,4.0,More than 8 hours,Healthy,No,8,1,Yes,No
 Male,18,5.0,3.0,More than 8 hours,Unhealthy,No,6,2,Yes,Yes
->>>>>>> 05d435549e222f24cdf594b61f70e5f8d66f9678
